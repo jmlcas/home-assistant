@@ -5,8 +5,8 @@ services:
   homeassistant:
     container_name: homeassistant
     image: ghcr.io/home-assistant/home-assistant:stable
-    ports:
-      - "8200:8123"
+    expose:
+      - "8123"
     environment:
       - TZ=Europe/Madrid
       - DISABLE_JEMALLOC=true
