@@ -1,17 +1,17 @@
-version: '3.3'
-
 services:
 
   homeassistant:
-    container_name: homeassistant
     image: ghcr.io/home-assistant/home-assistant:stable
+    container_name: homeassistant
     expose:
       - "8123"
     environment:
       - TZ='Europe/Madrid'
-      - DISABLE_JEMALLOC=true
+#      - DISABLE_JEMALLOC=true
     volumes:
       - ./app_config:/config
+      - /etc/localtime:/etc/localtime:ro
+      - /run/dbus:/run/dbus:ro
     restart: unless-stopped
     privileged: true
     network_mode: host
