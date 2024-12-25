@@ -1,6 +1,6 @@
 # home-assistant
 Home-assistant - Docker compose
 
-Ver en "localhost:8123"
+Ver en "http://localhost:8123"
 
 
